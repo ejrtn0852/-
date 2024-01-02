@@ -11,12 +11,6 @@ function solution(n) {
             }
         }
     }
-    let compositeNumbers = [];
-    
-    for(let i = 2; i <= n; i++) {
-        if(!isPrime[i]) {
-            compositeNumbers.push(i);
-        }
-    }
-    return compositeNumbers.length
+   const result = isPrime.filter( (v,i) => i > 2 && v == false);
+    return result.length
 }
